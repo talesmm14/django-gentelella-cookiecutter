@@ -1,0 +1,3 @@
+[submodule "static/gentelella"]
+	path = static/gentelella
+	url = https://github.com/ColorlibHQ/gentelella.git

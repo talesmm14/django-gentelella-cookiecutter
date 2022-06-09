@@ -1,0 +1,92 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    {% block head %}
+        {% block meta %}
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <!-- Meta, title, CSS, favicons, etc. -->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" href="{% static 'gentelella/production/images/favicon.ico' %}" type="image/ico"/>
+        {% endblock meta %}
+
+        <title>{{ cookiecutter.project_name }}! | {% block title %}{% endblock %}</title>
+
+        {% block stylesheets %}
+            <!-- Bootstrap -->
+            <link href="{% static 'gentelella/vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+            <!-- Font Awesome -->
+            <link href="{% static 'gentelella/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+            <!-- NProgress -->
+            <link href="{% static 'gentelella/vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+            <!-- iCheck -->
+            <link href="{% static 'gentelella/vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
+
+            <!-- bootstrap-progressbar -->
+            <link href="{% static 'gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}"
+                  rel="stylesheet">
+            <!-- JQVMap -->
+            <link href="{% static 'gentelella/vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet"/>
+            <!-- bootstrap-daterangepicker -->
+            <link href="{% static 'gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css' %}"
+                  rel="stylesheet">
+        {% endblock stylesheets %}
+        {% block extrastylesheets %}{% endblock extrastylesheets %}
+        <!-- Custom Theme Style -->
+        <link href="{% static 'gentelella/build/css/custom.min.css' %}" rel="stylesheet">
+    {% endblock head %}
+</head>
+
+<body class="{% block body_class %}nav-md {% endblock body_class %}">
+{% block body %}
+    <div class="container body">
+        <div class="main_container">
+
+
+            {% block sidebar %}
+                <div class="col-md-3 left_col {% block sidebar_class %} {% endblock sidebar_class %}">
+                    {% include "base/sidebar.html" %}
+                </div>
+            {% endblock sidebar %}
+
+            {% block top_navigation %}
+                <!-- top navigation -->
+                {% include "base/top_navigation.html" %}
+                <!-- /top navigation -->
+            {% endblock top_navigation %}
+
+            {% block content %}
+                <!-- page content -->
+                {#                {% include "base/content.html" %}#}
+                <!-- /page content -->
+            {% endblock content %}
+            {% block footer %}
+                <!-- footer content -->
+                <footer>
+                    {% include "base/footer.html" %}
+                </footer>
+                <!-- /footer content -->
+            {% endblock footer %}
+        </div>
+    </div>
+    {% block javascripts %}
+        <!-- jQuery -->
+        <script src="{% static 'gentelella/vendors/jquery/dist/jquery.min.js' %}"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'gentelella/vendors/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- FastClick -->
+        <script src="{% static 'gentelella/vendors/fastclick/lib/fastclick.js' %}"></script>
+        <!-- NProgress -->
+        <script src="{% static 'gentelella/vendors/nprogress/nprogress.js' %}"></script>
+    {% endblock javascripts %}
+
+    {% block extrajavascripts %}{% endblock extrajavascripts %}
+    <!-- Custom Theme Scripts -->
+    <script src="{% static 'gentelella/build/js/custom.min.js' %}"></script>
+{% endblock body %}
+</body>
+</html>
