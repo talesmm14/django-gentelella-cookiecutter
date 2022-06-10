@@ -4,5 +4,13 @@
   "description": "short description",
   "author": "Tales Melquiades",
   "email": "talesmelquiades@hotmail.com",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "app_class_name": "FooBarApp",
+  "app_title": "Foo Bar",
+  "_copy_without_render": [
+    "*.html",
+    "*.css",
+    "*.js",
+    "*gentelella"
+  ]
 }

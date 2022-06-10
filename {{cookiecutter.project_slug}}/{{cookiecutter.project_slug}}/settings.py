@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     # Your Apps
     'apps.authentication',
-    'apps.items',
+    'apps.{{cookiecutter.app_title}}',
     'apps.utils',
 ]
 

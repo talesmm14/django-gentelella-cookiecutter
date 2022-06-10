@@ -14,7 +14,7 @@
             <link rel="icon" href="{% static 'gentelella/production/images/favicon.ico' %}" type="image/ico"/>
         {% endblock meta %}
 
-        <title>{{ cookiecutter.project_name }}! | {% block title %}{% endblock %}</title>
+        <title>My project! | {% block title %}{% endblock %}</title>
 
         {% block stylesheets %}
             <!-- Bootstrap -->
@@ -61,7 +61,7 @@
 
             {% block content %}
                 <!-- page content -->
-                {#                {% include "base/content.html" %}#}
+                {#                {% include "{{cookiecutter.app_title}}/content.html" %}#}
                 <!-- /page content -->
             {% endblock content %}
             {% block footer %}
