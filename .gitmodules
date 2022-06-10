@@ -1,3 +1,0 @@
-[submodule "{{cookiecutter.project_slug}}/static/gentelella"]
-	path = {{cookiecutter.project_slug}}/static/gentelella
-	url = https://github.com/ColorlibHQ/gentelella.git
