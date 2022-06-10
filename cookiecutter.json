@@ -5,8 +5,8 @@
   "author": "Tales Melquiades",
   "email": "talesmelquiades@hotmail.com",
   "version": "0.1.0",
+  "app_title": "FooBar",
   "app_class_name": "FooBarApp",
-  "app_title": "Foo Bar",
   "_copy_without_render": [
     "*.html",
     "*.css",
