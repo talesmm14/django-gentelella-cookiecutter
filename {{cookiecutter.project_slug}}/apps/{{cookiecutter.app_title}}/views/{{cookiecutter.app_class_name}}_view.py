@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def {{cookiecutter.app_class_name}}_view(request):
+    pass
