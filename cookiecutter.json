@@ -1,6 +1,8 @@
 {
-"project_name": "default_name",
-"description": "short description",
-"author": "Dr. Tales Melquiades",
-"email": "talesmelquiades@hotmail.com"
+  "project_name": "My Project",
+  "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+  "description": "short description",
+  "author": "Tales Melquiades",
+  "email": "talesmelquiades@hotmail.com",
+  "version": "0.1.0"
 }
